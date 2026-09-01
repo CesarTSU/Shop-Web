@@ -1,0 +1,157 @@
+:root {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --primary: #020202;
+  --primary-soft: #eef2ff;
+  --text: #070707;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --shadow: #6e7023;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(135deg, #575858, #f6fa33);  /* el linear-gradient es para el fondo */
+  color: var(--text);
+}
+
+.page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+}
+
+.card {
+  width: min(100%, 430px);
+  background: var(--card);
+  border: 1px solid #f6fa33;
+  border-radius: 24px;
+  padding: 32px 28px;
+  box-shadow: 0 18px 40px var(--shadow);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.brand-mark {
+  width: 28px;
+  height: 28px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  flex-shrink: 0;
+}
+
+.brand-mark {                           /*esto es para el mini logo */
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  color: rgb(245, 242, 73);
+  background: var(--primary);
+  font-size: 0.9rem;
+}
+
+.header {
+  margin-bottom: 16px;
+}
+
+.eyebrow {
+  margin: 0 0 5px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 2.4rem);
+  line-height: 1.1;
+}
+
+.form {
+  display: grid;
+  gap: 18px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+label {
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 14px 15px;
+  font-size: 0.98rem;
+  color: var(--text);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #c7d2fe;
+  box-shadow: 0 0 0 4px #0c0c0c;
+}
+
+button {
+  margin-top: 8px;
+  border: none;
+  border-radius: 12px;
+  padding: 15px 16px;
+  background: var(--primary);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.96;
+  transform: translateY(-1px);
+}
+
+.login-text {
+  margin: 20px 0 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.login-text a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 24px 20px;
+    border-radius: 18px;
+  }
+} 
