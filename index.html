@@ -47,17 +47,34 @@
             <input id="confirm-password" type="password" placeholder="Repite tu contraseña" />
           </div>
 
-          <form class="form">
-          <div class="field">
-            <label for="name">Cual es tu Pokemon Favorito?</label>
-            <input id="name" type="text" placeholder="Nombre de tu pokemon" />
+            <div class="checkbox-group-container">
+            <label class="group-label">¿Cuál es tu Pokemon inicial favorito de kanto?</label>
+            <div class="checkbox-options">
+            <label class="checkbox-label">
+            <input type="checkbox" name="pokemon-favorito" value="bulbasaur"> Bulbasaur
+            </label>
+            <label class="checkbox-label">
+            <input type="checkbox" name="pokemon-favorito" value="charmander"> Charmander
+            </label>
+            <label class="checkbox-label">
+            <input type="checkbox" name="pokemon-favorito" value="squirtle"> Squirtle
+           </label>
           </div>
+         </div>
 
-          <form class="form">
-          <div class="field">
-            <label for="name">Que tipos de pokemones prefieres?</label>
-            <input id="name" type="text" placeholder="Nombre de tu elemento" />
-          </div>
+          <div class="input-container"> 
+          <label for="region-pokemon">¿Cuál es tu región favorita?</label>
+          <div class="select-wrapper">
+            <select id="region-pokemon" name="region-pokemon">
+            <option value="" disabled selected>Selecciona una región</option>
+            <option value="kanto">Kanto</option>
+            <option value="johto">Johto</option>
+            <option value="hoenn">Hoenn</option>
+            <option value="sinnoh">Sinnoh</option>
+            <option value="unova">Unova</option>
+        </select>
+    </div>
+</div>
 
           <button type="submit">Registrarse</button>
         </form>

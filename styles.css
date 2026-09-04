@@ -155,3 +155,92 @@ button:hover {
     border-radius: 18px;
   }
 } 
+
+.checkbox-group-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+    width: 100%;
+}
+/*nombre principal*/
+.group-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+/*para alinear*/ 
+.checkbox-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #f9f9f9; 
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 12px 16px;
+}
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #000000;
+    cursor: pointer;
+}
+/*ticket y colores chackbox */
+.checkbox-label input[type="checkbox"] {
+    width: 12px;
+    height: 12px;
+    accent-color: #080808; 
+}
+
+/* configuraciones del contenedor de opciones */
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+/*aca va la pregunta el color y tamaño*/
+.input-container label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/*configuracion general del wrapper*/
+.select-wrapper select {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 14px;
+    font-family: inherit;
+    color: #070707;
+    background-color: #f9f9f9; 
+    border: 1px solid #e5e5e5;
+    border-radius: 12px; /*redonde bordes*/
+    appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+/* esto para agregar una flecha y que se entienda que es desplegable*/
+.select-wrapper::after {
+    content: "▼";
+    font-size: 10px;
+    color: #000000;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; 
+}
