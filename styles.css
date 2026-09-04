@@ -170,29 +170,32 @@ button:hover {
     color: #1a1a1a;
 }
 
-/*para alinear*/ 
+/* Contenedor principal de las opciones */
 .checkbox-options {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background-color: #f9f9f9; 
-    border: 1px solid #e5e5e5;
-    border-radius: 12px;
-    padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
 }
+
+/* Alineación individual de cada opción (radio + texto) */
 .checkbox-label {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 14px;
-    color: #000000;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Alinea todo a la izquierda */
+  gap: 10px;                  /* Espacio entre el círculo y el texto */
+  cursor: pointer;
+  text-align: left;
 }
-/*ticket y colores chackbox */
+
+/* Para asegurar que el radio no se estire ni se mueva */
+.checkbox-label input[type="radio"],
 .checkbox-label input[type="checkbox"] {
-    width: 12px;
-    height: 12px;
-    accent-color: #080808; 
+  margin: 0;
+  cursor: pointer;
+  width: 18px;  /* Tamaño uniforme para el círculo */
+  height: 18px;
+  flex-shrink: 0; /* Evita que se aplaste */
 }
 
 /* configuraciones del contenedor de opciones */
@@ -253,4 +256,16 @@ button:hover {
 
 .flex-container form {
   flex: 1; /* Hace que ambos formularios compartan el mismo ancho */
+}
+
+/*de aca abajo es para marcar validar errore*/
+.error-message {
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin-top: 4px;
+  display: block;
+}
+
+input.input-error, select.input-error {
+  border: 1px solid #e74c3c !important;
 }

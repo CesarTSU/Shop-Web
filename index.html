@@ -12,6 +12,7 @@
   <body>
     <div class="flex-container">
       
+      <!-- FORMULARIO 1 -->
       <main class="page">
         <section class="card">
           <div class="brand">
@@ -49,20 +50,20 @@
               <input id="confirm-password" type="password" placeholder="Repite tu contraseña" />
             </div>
 
-            <div class="checkbox-group-container">
-              <label class="group-label">¿Cuál es tu Pokemon inicial favorito de kanto?</label>
-              <div class="checkbox-options">
-                <label class="checkbox-label">
-                  <input type="checkbox" name="pokemon-favorito" value="bulbasaur" /> Bulbasaur
-                </label>
-                <label class="checkbox-label">
-                  <input type="checkbox" name="pokemon-favorito" value="charmander" /> Charmander
-                </label>
-                <label class="checkbox-label">
-                  <input type="checkbox" name="pokemon-favorito" value="squirtle" /> Squirtle
-                </label>
-              </div>
-            </div>
+           <div class="checkbox-group-container">
+           <label class="group-label">¿Cuál es tu Pokemon inicial favorito de kanto?</label>
+           <div class="checkbox-options">
+          <label class="checkbox-label">
+         <input type="radio" name="pokemon-favorito" value="bulbasaur" /> Bulbasaur
+         </label>
+        <label class="checkbox-label">
+        <input type="radio" name="pokemon-favorito" value="charmander" /> Charmander
+        </label>
+       <label class="checkbox-label">
+      <input type="radio" name="pokemon-favorito" value="squirtle" /> Squirtle
+    </label>
+  </div>
+</div>
 
             <div class="input-container">
               <label for="region-pokemon">¿Cuál es tu región favorita?</label>
@@ -77,10 +78,13 @@
                 </select>
               </div>
             </div>
+
+            <button type="submit" class="btn-submit">Guardar Datos de Cuenta</button>
           </form>
         </section>
       </main>
 
+       <!-- FORMULARIO 2 -->
       <main class="page">
         <section class="card">
           <div class="brand">
@@ -104,25 +108,27 @@
             </div>
 
             <div class="checkbox-group-container">
-              <label class="group-label">¿Te Gustaria participar en sorteos de cartas??</label>
-              <div class="checkbox-options">
-                <label class="checkbox-label">
-                  <input type="checkbox" name="Si" value="Si" /> Si
-                </label>
-                <label class="checkbox-label">
-                  <input type="checkbox" name="No" value="No" /> No
-              </div>
-            </div>
+            <label class="group-label">¿Te gustaría participar en sorteos de cartas?</label>
+            <div class="checkbox-options">
+            <label class="checkbox-label">
+      
+           <input type="radio" name="sorteos" value="Si" /> Sí
+           </label>
+           <label class="checkbox-label">
+           <input type="radio" name="sorteos" value="No" /> No
+          </label>
+          </div>
+          </div>
 
             <div class="input-container">
-              <label for="coleccionar">¿Que sueles coleccionar?</label>
+              <label for="coleccionar">¿Qué sueles coleccionar?</label>
               <div class="select-wrapper">
                 <select id="coleccionar" name="coleccionar">
                   <option value="" disabled selected>Seleccione sus preferencias</option>
-                  <option value="kanto">Cartas</option>
-                  <option value="johto">Figuras</option>
-                  <option value="hoenn">Peluches</option>
-                  <option value="sinnoh">Merchandising</option>
+                  <option value="cartas">Cartas</option>
+                  <option value="figuras">Figuras</option>
+                  <option value="peluches">Peluches</option>
+                  <option value="merchandising">Merchandising</option>
                 </select>
               </div>
             </div>
@@ -135,6 +141,8 @@
           </form>
         </section>
       </main>
+
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
