@@ -244,3 +244,13 @@ button:hover {
     transform: translateY(-50%);
     pointer-events: none; 
 }
+.flex-container {
+  display: flex;
+  flex-direction: row; 
+  gap: 20px;           /* Espacio entre ambos formularios */
+  align-items: flex-start; 
+}
+
+.flex-container form {
+  flex: 1; /* Hace que ambos formularios compartan el mismo ancho */
+}
