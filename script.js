@@ -5,9 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const regexNombre = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
   const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  // ==========================================
   // VALIDACIÓN FORMULARIO 1
-  // ==========================================
+ 
   if (form1) {
     form1.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -75,10 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-
-  // ==========================================
   // VALIDACIÓN FORMULARIO 2
-  // ==========================================
   if (form2) {
     form2.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -100,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
         esValido = false;
       }
 
-      // 3. Preferencias de colección (Select #coleccionar)
+      // 3. Preferencias de colección 
       const coleccionar = document.getElementById('coleccionar');
       if (coleccionar.value === '') {
         mostrarError(coleccionar, 'Por favor, selecciona qué sueles coleccionar.');
@@ -112,10 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-
-  // ==========================================
   // FUNCIONES AUXILIARES
-  // ==========================================
   function mostrarError(element, mensaje) {
     element.classList.add('input-error');
     const errorSpan = document.createElement('span');
